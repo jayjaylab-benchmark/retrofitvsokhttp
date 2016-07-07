@@ -1,2 +1,226 @@
 # retrofitvsokhttp
 This micro benchmark compares performance of retrofit2 and okhttp3.
+
+
+### MicroBenchmark Result
+```
+# JMH 1.12 (released 97 days ago, please consider updating!)
+# VM version: JDK 1.8.0_45, VM 25.45-b02
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: <none>
+# Measurement: 1 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: com.jayjaylab.benchmark.AndroidHttpLibraryBenchmark.testOkhttp3
+
+# Run progress: 0.00% complete, ETA 00:00:00
+# Fork: 1 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2471.418 ms/op
+
+# Run progress: 5.00% complete, ETA 00:00:58
+# Fork: 2 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2387.632 ms/op
+
+# Run progress: 10.00% complete, ETA 00:00:54
+# Fork: 3 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2614.256 ms/op
+
+# Run progress: 15.00% complete, ETA 00:00:52
+# Fork: 4 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2409.545 ms/op
+
+# Run progress: 20.00% complete, ETA 00:00:48
+# Fork: 5 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2587.648 ms/op
+
+# Run progress: 25.00% complete, ETA 00:00:46
+# Fork: 6 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+1992.963 ms/op
+
+# Run progress: 30.00% complete, ETA 00:00:41
+# Fork: 7 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2496.987 ms/op
+
+# Run progress: 35.00% complete, ETA 00:00:39
+# Fork: 8 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2441.967 ms/op
+
+# Run progress: 40.00% complete, ETA 00:00:36
+# Fork: 9 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+1579.302 ms/op
+
+# Run progress: 45.00% complete, ETA 00:00:32
+# Fork: 10 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2909.348 ms/op
+
+
+Result "testOkhttp3":
+  N = 10
+  mean =   2389.107 ±(99.9%) 550.925 ms/op
+
+  Histogram, ms/op:
+    [1000.000, 1125.000) = 0 
+    [1125.000, 1250.000) = 0 
+    [1250.000, 1375.000) = 0 
+    [1375.000, 1500.000) = 0 
+    [1500.000, 1625.000) = 1 
+    [1625.000, 1750.000) = 0 
+    [1750.000, 1875.000) = 0 
+    [1875.000, 2000.000) = 1 
+    [2000.000, 2125.000) = 0 
+    [2125.000, 2250.000) = 0 
+    [2250.000, 2375.000) = 0 
+    [2375.000, 2500.000) = 5 
+    [2500.000, 2625.000) = 2 
+    [2625.000, 2750.000) = 0 
+    [2750.000, 2875.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   1579.302 ms/op
+     p(50.0000) =   2456.693 ms/op
+     p(90.0000) =   2879.839 ms/op
+     p(95.0000) =   2909.348 ms/op
+     p(99.0000) =   2909.348 ms/op
+     p(99.9000) =   2909.348 ms/op
+     p(99.9900) =   2909.348 ms/op
+     p(99.9990) =   2909.348 ms/op
+     p(99.9999) =   2909.348 ms/op
+    p(100.0000) =   2909.348 ms/op
+
+
+# JMH 1.12 (released 97 days ago, please consider updating!)
+# VM version: JDK 1.8.0_45, VM 25.45-b02
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: <none>
+# Measurement: 1 iterations, single-shot each
+# Timeout: 10 min per iteration
+# Threads: 1 thread
+# Benchmark mode: Single shot invocation time
+# Benchmark: com.jayjaylab.benchmark.AndroidHttpLibraryBenchmark.testRetrofit2
+
+# Run progress: 50.00% complete, ETA 00:00:29
+# Fork: 1 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2797.613 ms/op
+
+# Run progress: 55.00% complete, ETA 00:00:27
+# Fork: 2 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2366.259 ms/op
+
+# Run progress: 60.00% complete, ETA 00:00:24
+# Fork: 3 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2663.821 ms/op
+
+# Run progress: 65.00% complete, ETA 00:00:21
+# Fork: 4 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2508.463 ms/op
+
+# Run progress: 70.00% complete, ETA 00:00:18
+# Fork: 5 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2507.066 ms/op
+
+# Run progress: 75.00% complete, ETA 00:00:15
+# Fork: 6 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2525.488 ms/op
+
+# Run progress: 80.00% complete, ETA 00:00:12
+# Fork: 7 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2501.223 ms/op
+
+# Run progress: 85.00% complete, ETA 00:00:09
+# Fork: 8 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+1967.030 ms/op
+
+# Run progress: 90.00% complete, ETA 00:00:06
+# Fork: 9 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2527.677 ms/op
+
+# Run progress: 95.00% complete, ETA 00:00:03
+# Fork: 10 of 10
+Iteration   1: ########## setUp() ##########
+########## tearDown() ##########
+2404.388 ms/op
+
+
+Result "testRetrofit2":
+  N = 10
+  mean =   2476.903 ±(99.9%) 327.647 ms/op
+
+  Histogram, ms/op:
+    [1900.000, 1950.000) = 0 
+    [1950.000, 2000.000) = 1 
+    [2000.000, 2050.000) = 0 
+    [2050.000, 2100.000) = 0 
+    [2100.000, 2150.000) = 0 
+    [2150.000, 2200.000) = 0 
+    [2200.000, 2250.000) = 0 
+    [2250.000, 2300.000) = 0 
+    [2300.000, 2350.000) = 0 
+    [2350.000, 2400.000) = 1 
+    [2400.000, 2450.000) = 1 
+    [2450.000, 2500.000) = 0 
+    [2500.000, 2550.000) = 5 
+    [2550.000, 2600.000) = 0 
+    [2600.000, 2650.000) = 0 
+    [2650.000, 2700.000) = 1 
+    [2700.000, 2750.000) = 0 
+
+  Percentiles, ms/op:
+      p(0.0000) =   1967.030 ms/op
+     p(50.0000) =   2507.764 ms/op
+     p(90.0000) =   2784.234 ms/op
+     p(95.0000) =   2797.613 ms/op
+     p(99.0000) =   2797.613 ms/op
+     p(99.9000) =   2797.613 ms/op
+     p(99.9900) =   2797.613 ms/op
+     p(99.9990) =   2797.613 ms/op
+     p(99.9999) =   2797.613 ms/op
+    p(100.0000) =   2797.613 ms/op
+
+
+# Run complete. Total time: 00:01:00
+
+Benchmark                                  Mode  Cnt     Score     Error  Units
+AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2389.107 ± 550.925  ms/op
+AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  2476.903 ± 327.647  ms/op
+```

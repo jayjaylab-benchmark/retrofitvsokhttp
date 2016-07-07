@@ -10,7 +10,7 @@ Benchmark                                  Mode  Cnt     Score     Error  Units
 AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2389.107 ± 550.925  ms/op
 AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  2476.903 ± 327.647  ms/op
 ```
-### MicroBenchmark Result Details #2(2016-07-08T00:47:12+09:00)
+### MicroBenchmark Result #2(2016-07-08T00:47:12+09:00)
 ```
 Benchmark                                  Mode  Cnt     Score     Error  Units
 AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2472.586 ± 245.455  ms/op

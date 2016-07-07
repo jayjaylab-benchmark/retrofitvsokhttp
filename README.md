@@ -17,6 +17,8 @@ AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2472.586 ± 245.455  ms/op
 AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  2920.377 ± 760.955  ms/op
 ```
 
+# What you choose is your responsibility. BTW I prefer okhttp3.
+
 ## Micro Benchmarking source codes
 ```java
 public class AndroidHttpLibraryBenchmark {

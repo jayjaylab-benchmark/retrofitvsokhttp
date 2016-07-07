@@ -1,8 +1,20 @@
 # retrofitvsokhttp
 This micro benchmark compares performance of retrofit2 and okhttp3.
+Under MAC OS X yosemite version 10.10.5(14F27), 2.7GHz Intel core i5, 8GB 1867MHz DD3, 
+Measured code fragments includes sending a GET request to "https://api.github
+.com/users/octocat/repos" resource and unmarshall the response json string to the 
+corresponding POJO class.
+### MicroBenchmark Result #1(2016-07-07T22:41:40+09:00)
+```
+Benchmark                                  Mode  Cnt     Score     Error  Units
+AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2389.107 ± 550.925  ms/op
+AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  2476.903 ± 327.647  ms/op
+```
+###
 
 
-### MicroBenchmark Result
+
+### MicroBenchmark Result Details #1(2016-07-07T22:41:40+09:00)
 ```
 # JMH 1.12 (released 97 days ago, please consider updating!)
 # VM version: JDK 1.8.0_45, VM 25.45-b02

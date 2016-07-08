@@ -25,7 +25,7 @@ AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  3110.812 ± 1659.656  ms/o
 ```
 
 # Result Explanation 
-I think what you choose is your responsibility. Retrofit2 provides a simple client interface for Restful API. Okhttp3 provides the whole bunch of HTTP funtionailty. As Jake Wharton mentioned[subreddit][https://redd.it/4rpdlv], this benchmark runs on Hotspot JVM not on Dalvik or ART which may show different symptom on Dalvik or ART. But I wonder pattern of the result will be changed if it's run on Dalvik or ART. Um but I don't think it's likely to change much. So in my case I will choose Okhttp3 though it requires I add some more classe for optimizations.
+I think what you choose is your responsibility. Retrofit2 provides a simple client interface for Restful API. Okhttp3 provides the whole bunch of HTTP funtionailty. As Jake Wharton mentioned[subreddit](https://redd.it/4rpdlv), this benchmark runs on Hotspot JVM not on Dalvik or ART which may show different symptom on Dalvik or ART. But I wonder pattern of the result will be changed if it's run on Dalvik or ART. Um but I don't think it's likely to change much. So in my case I will choose Okhttp3 though it requires I add some more classe for optimizations.
 *** Anyways this benchmark must run on Dalvik or ART for sure. This benchmark only suggests a time from creating the first request, network cost, receving the response and unmarshalling json to POJO not 2nd or next requests. ***
 
 ## Micro Benchmarking source codes

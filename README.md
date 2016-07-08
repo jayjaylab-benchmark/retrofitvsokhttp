@@ -4,6 +4,7 @@ Under MAC OS X yosemite version 10.10.5(14F27), 2.7GHz Intel core i5, 8GB 1867MH
 Measured code fragments includes sending a GET request to "https://api.github
 .com/users/octocat/repos" resource and unmarshalling the response json string to the 
 corresponding POJO class.
+
 ### MicroBenchmark Result #1(2016-07-07T22:41:40+09:00)
 ```
 Benchmark                                  Mode  Cnt     Score     Error  Units
@@ -23,7 +24,9 @@ AndroidHttpLibraryBenchmark.testOkhttp3      ss   10  2427.628 ±  556.801  ms/o
 AndroidHttpLibraryBenchmark.testRetrofit2    ss   10  3110.812 ± 1659.656  ms/op
 ```
 
-# What you choose is your responsibility. BTW I prefer okhttp3.
+# Result Explanation 
+I think what you choose is your responsibility. Retrofit2 provides a simple client interface for Restful API. Okhttp3 provides the whole bunch of HTTP funtionailty. As Jake Wharton mentioned(https://redd.it/4rpdlv), this benchmark runs on Hotspot JVM not on Dalvik or ART which may show different symptom on Dalvik or ART. But I wonder pattern of the result will be changed if it's run on Dalvik or ART. Um but I don't think it's likely to change much.
+*** Anyways this benchmark must run on Dalvik or ART for sure. This benchmark only suggests a time from creating the first request, network cost, receving the response and unmarshalling json to POJO not 2nd or next requests. ***
 
 ## Micro Benchmarking source codes
 ```java

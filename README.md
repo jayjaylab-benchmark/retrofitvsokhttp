@@ -1,8 +1,7 @@
 # retrofitvsokhttp
 This micro benchmark compares performance of retrofit2 and okhttp3.
 Under MAC OS X yosemite version 10.10.5(14F27), 2.7GHz Intel core i5, 8GB 1867MHz DD3, 
-Measured code fragments includes sending a GET request to "https://api.github
-.com/users/octocat/repos" resource and unmarshalling the response json string to the 
+Measured code fragments includes sending a GET request to "https://api.github.com/users/octocat/repos" resource and unmarshalling the response json string to the 
 corresponding POJO class.
 
 ### MicroBenchmark Result #1(2016-07-07T22:41:40+09:00)
